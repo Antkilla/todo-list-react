@@ -25,13 +25,19 @@ function App() {
   
   }
 
+
+  const deleteTask = (id) =>  {
+
+  }
+
+
   return (
     <div className="App">
       <h1>My React TO-DO List</h1> 
       {/*passes down the task state variable above as a prop called 'task' to the child*/ }
       {/*<MyComponenet propName={originalName}*/}
       <AddTask addNewTask={addNewTask}/>
-      <TaskList tasks={tasks}/>
+      <TaskList tasks={tasks} deleteTask={deleteTask}/>
     </div>
   );
 }

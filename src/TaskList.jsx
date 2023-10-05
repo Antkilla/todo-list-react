@@ -1,13 +1,18 @@
 import Task from './Task';
 
-const TaskList = ({ tasks }) => {
+const TaskList = ({ tasks, deleteTask }) => {
     return(
         <div>
             <h2>TaskList</h2>
-            <p>{JSON.stringify(tasks)}</p>
-            <Task />
-            <Task />
-            <Task/>
+            
+            {/*{id:_, text:_}     */}
+            {tasks.map( (task) =>  (
+                <Task key={task.id} task={task} deleteTask={deleteTask}/>
+            )
+            
+            )
+            
+            }
         </div>
     )
 }
