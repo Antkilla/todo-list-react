@@ -27,8 +27,13 @@ function App() {
 
 
   const deleteTask = (id) =>  {
-
+    //filter meth: checks every item in array//
+    //given condition returns a new array for all items if true//
+ 
+    let updatedTasks = tasks.filter( (task) => task.id !== id);
+    setTasks(updatedTasks);
   }
+
 
 
   return (
