@@ -18,11 +18,7 @@ function App() {
 
     setTasks([...tasks, newTask]);
 
-
-
-
-
-  
+    console.log(tasks);
   }
 
 
@@ -34,7 +30,12 @@ function App() {
     setTasks(updatedTasks);
   }
 
-
+  const editTask = (id, newText) => {
+    let updatedTasks = tasks.map( (task) => (task.id === id) ? {...task, text: newText} : task );
+    
+    
+    setTasks(updatedTasks);
+  }
 
   return (
     <div className="App">
@@ -42,7 +43,7 @@ function App() {
       {/*passes down the task state variable above as a prop called 'task' to the child*/ }
       {/*<MyComponenet propName={originalName}*/}
       <AddTask addNewTask={addNewTask}/>
-      <TaskList tasks={tasks} deleteTask={deleteTask}/>
+      <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask}/>
     </div>
   );
 }
