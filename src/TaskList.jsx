@@ -6,14 +6,16 @@ const TaskList = ({ tasks, deleteTask, editTask }) => {
             <h2>TaskList</h2>
             
             {/*{id:_, text:_}     */}
-            {tasks.map( (task) =>  (
-                <Task key={task.id} task={task} deleteTask={deleteTask}
-                editTask={editTask}/>
-            )
-            
-            )
-            
-            }
+            <ul className="List-group">
+                {tasks.map( (task) =>  (
+                    <Task 
+                        key={task.id} 
+                        task={task} 
+                        deleteTask={deleteTask}
+                        editTask={editTask}
+                    />
+                ))}
+            </ul>
         </div>
     )
 }

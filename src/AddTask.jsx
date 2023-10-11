@@ -11,13 +11,15 @@ const AddTask = ({ addNewTask }) => {   //passes the addNewTask funct as a prop
     }
 
     return(
-        <div>
+        <div className="mb-3">
             <h2>Add Task</h2> 
+
             <form onSubmit={onSubmit}>
-                <input type="text" placeholder="Enter a new task" value={text} onChange={(e) => setText(e.target.value)}/>                
-                <button type="submit"> Save Task </button>
+                <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Enter a new task" value={text} onChange={(e) => setText(e.target.value)}/>                        
+                <button type="submit" className="btn btn-primary input-group-append">Save Task</button>                
+                </div>
             </form>
-           
             {/*JSON.stringify(tasks)*/}       {/*json makes a string of the object props.task*/}
             {/*example*/}
         </div>

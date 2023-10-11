@@ -15,16 +15,16 @@ const Task = ({ task, deleteTask, editTask}) => {
     }
 
     return(
-        <div>
-            <h3>
-                {isEditing
-                    ? <input type="text" placeholder="Enter a new task" value={newText} onChange={(e) => setNewText(e.target.value)}/>                
-                    :task.text
-                }         
+        <li className="list-group-item d-flex justify-content-between align-items-center">
+            {isEditing
+                ? <input type="text" placeholder="Enter a new task" value={newText} onChange={(e) => setNewText(e.target.value)}/>                
+                :task.text
+            }    
+            <div>     
                 <button onClick={() => handleEditClick()}>{isEditing ? "Confirm" : "Edit"} </button>
                 <button onClick={() => deleteTask(task.id)}>Delete</button>
-            </h3>
-        </div>
+            </div>
+        </li>
     )
 }
 

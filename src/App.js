@@ -1,4 +1,5 @@
-import './App.css';
+//import './App.css';//
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AddTask from './AddTask';
 import TaskList from './TaskList';
 import { useEffect, useState } from 'react';
@@ -75,11 +76,16 @@ useEffect(() => {
 
 
   return (
-    <div className="App">
-      <h1>My React TO-DO List</h1> 
-      {welcomeMessage && <p>{welcomeMessage}</p>}
+    //container provides a fixed-width container 
+    //max width that changes at different "breakpoints" depends on the ration screen size
+    //mt,mb,ml,mx,my,\...pt,pb,pr,pl,px,py  (margin, padding)
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">My React TO-DO List</h1> 
+      {welcomeMessage && <p className="text-center">{welcomeMessage}</p>}
       {/*passes down the task state variable above as a prop called 'task' to the child*/ }
       {/*<MyComponenet propName={originalName}*/}
+
+      {/*CSS/styling is not applied to React components directly only to the HTML inside the jsx*/}
       <AddTask addNewTask={addNewTask}/>
       <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask}/>
     </div>
@@ -87,3 +93,46 @@ useEffect(() => {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Personal Task Management:
+
+    Individuals can use it to keep track of personal tasks, errands, and deadlines.
+    Helps in prioritizing tasks and managing time effectively.
+
+Work Projects:
+
+    Teams can use a shared To-Do List to collaborate on project tasks.
+    Each team member can add, edit, and mark tasks as complete, providing accountability.
+
+Event Planning:
+
+    When organizing an event, a To-Do List can help manage tasks related to planning, logistics, and coordination.
+    Tasks like sending invitations, arranging catering, and setting up the venue can be organized and tracked(wedding)
+
+Study and Homework:
+
+    Students can use it to manage assignments, deadlines, and study sessions.
+    Provides a clear overview of upcoming exams and tasks.
+*/
