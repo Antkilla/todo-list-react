@@ -3,7 +3,7 @@ import Task from './Task';
 const TaskList = ({ tasks, deleteTask, editTask }) => {
     return(
         <div>
-            <h2>TaskList</h2>
+            <h2 className="text-center">TaskList</h2>
             
             {/*{id:_, text:_}     */}
             <ul className="List-group">

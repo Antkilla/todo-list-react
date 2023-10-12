@@ -86,8 +86,14 @@ useEffect(() => {
       {/*<MyComponenet propName={originalName}*/}
 
       {/*CSS/styling is not applied to React components directly only to the HTML inside the jsx*/}
-      <AddTask addNewTask={addNewTask}/>
-      <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask}/>
+      <div className="row">
+        <div className="col-lg-6 col-md-4">
+          <AddTask addNewTask={addNewTask}/>
+        </div>
+        <div className="col-lg-6 col-md-8">
+          <TaskList tasks={tasks} deleteTask={deleteTask} editTask={editTask}/>
+        </div>
+      </div>   
     </div>
   );
 }

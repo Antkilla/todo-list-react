@@ -6,8 +6,10 @@ const AddTask = ({ addNewTask }) => {   //passes the addNewTask funct as a prop
 
     const onSubmit = (e) => {
         e.preventDefault();
+       if (text.replaceAll(" ","").length >0)   {
         addNewTask({ text });
         setText('');
+       }
     }
 
     return(
@@ -20,7 +22,7 @@ const AddTask = ({ addNewTask }) => {   //passes the addNewTask funct as a prop
                 <button type="submit" className="btn btn-primary input-group-append">Save Task</button>                
                 </div>
             </form>
-            {/*JSON.stringify(tasks)*/}       {/*json makes a string of the object props.task*/}
+            {/*JSON.stringify(tasks)*/}  {/*json makes a string of the object props.task*/}
             {/*example*/}
         </div>
     )

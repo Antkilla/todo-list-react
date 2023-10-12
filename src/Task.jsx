@@ -21,8 +21,8 @@ const Task = ({ task, deleteTask, editTask}) => {
                 :task.text
             }    
             <div>     
-                <button onClick={() => handleEditClick()}>{isEditing ? "Confirm" : "Edit"} </button>
-                <button onClick={() => deleteTask(task.id)}>Delete</button>
+                <button class="btn btn-outline-info btn-sm mx-1" onClick={() => handleEditClick()}>{isEditing ? "Confirm" : "Edit"} </button>
+                <button class="btn btn-danger btn-sm" onClick={() => deleteTask(task.id)}>Delete</button>
             </div>
         </li>
     )
