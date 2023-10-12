@@ -17,7 +17,7 @@ const Task = ({ task, deleteTask, editTask}) => {
     return(
         <li className="list-group-item d-flex justify-content-between align-items-center">
             {isEditing
-                ? <input type="text" placeholder="Enter a new task" value={newText} onChange={(e) => setNewText(e.target.value)}/>                
+                ? <input type="text" class="form-control" placeholder="Enter a new task" value={newText} onChange={(e) => setNewText(e.target.value)}/>                
                 :task.text
             }    
             <div>     

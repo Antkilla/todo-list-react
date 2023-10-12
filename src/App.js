@@ -1,5 +1,5 @@
-//import './App.css';//
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import './App.css';//
 import AddTask from './AddTask';
 import TaskList from './TaskList';
 import { useEffect, useState } from 'react';
