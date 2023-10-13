@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Task = ({ task, deleteTask, editTask}) => {
+const Task = ({ task, deleteTask, editTask }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [newText, setNewText] = useState(task.text);
     
@@ -11,13 +11,13 @@ const Task = ({ task, deleteTask, editTask}) => {
         }
 
         setIsEditing(!isEditing);
-
     }
 
     return(
         <li className="list-group-item d-flex justify-content-between align-items-center">
+
             {isEditing
-                ? <input type="text" class="form-control" placeholder="Enter a new task" value={newText} onChange={(e) => setNewText(e.target.value)}/>                
+                ? <input type="text" className="form-control" placeholder="Enter a new task" value={newText} onChange={(e) => setNewText(e.target.value)}/>                
                 :task.text
             }    
             <div>     
